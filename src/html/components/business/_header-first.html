@@ -1,0 +1,21 @@
+<header class='header-first '>
+    <div class="header-first__wrapper container">
+        @@include("components/ui/_logo.html", {class:"header-first__logo"})
+        <div class="header-first__content">
+            @@include("components/ui/_text-with-icon.html", {
+                class:"text-with-icon_location header-first__location",
+                text:"<strong>Ваш город:</strong> Уфа, Достоевского, 49"
+            })
+            @@include("components/ui/_text-with-icon.html", {
+                class:"text-with-icon_phone header-first__phone",
+                href:"tel:8 (800) 551-12-58",
+                text:"8 (800) 551-12-58"
+            })
+            @@include("components/ui/_link-button.html", {
+                class:"button_rounder header-first__call-button",
+                href:"#",
+                text:"Заказать звонок"
+            })
+        </div>
+    </div>
+</header>

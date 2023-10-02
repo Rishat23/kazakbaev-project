@@ -1,0 +1,10 @@
+	<li class="doctors-list__item swiper-slide">
+		<img class="doctors-list__image" @@if (context.src !== "undefined") {src="@@src"}>
+		<div class="doctors-list__name" >
+			<div class="doctors-list__description" >
+				@@if (context.description !== "undefined") {@@description}
+			</div>
+			@@if (context.name !== "undefined") {@@name}
+		</div>
+	</li>
+

@@ -1,0 +1,10 @@
+<nav>
+	<ul class="help-info__nav-list">
+		@@for (let i = 0; i < items.length; i++) {
+			@@include("components/business/help-info/_item.html", {
+				href: "`+items[i].href+`",
+				text: "`+items[i].text+`",
+			})
+		}
+	</ul>
+</nav>

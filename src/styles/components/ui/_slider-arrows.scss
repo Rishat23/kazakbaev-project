@@ -1,0 +1,38 @@
+@use "../../vars/colors";
+
+.slider-arrows {
+	display: flex;
+	gap: .9375em;
+
+	&__arrow{
+		position: relative;
+		background-color: colors.$white;
+		border-radius: 50%;
+		height: 3.8125em;
+		width: 3.8125em;
+		cursor: pointer;
+		border: 1px solid colors.$blue100;
+
+		&::before{
+			content:'';
+			width: .625em;
+			height: .625em;
+			border-left: 3px solid colors.$blue100;
+			border-bottom: 3px solid colors.$blue100;
+			transform: rotate(45deg) translate(-75%,-25%);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+
+		&_right::before{
+			transform: rotate(225deg) translate(75%,25%);
+		}
+	}
+}
+
+
+
+
+
+

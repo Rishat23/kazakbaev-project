@@ -1,0 +1,16 @@
+@use "../../mixins/fontsStyles";
+@use "../../vars/colors";
+
+.logo {
+    display: flex;
+
+    &__img {
+        width: 5.125em;
+        height: 5.125em;
+    }
+
+    &__text {
+        @include fontsStyles.TextMD;
+    }
+}
+

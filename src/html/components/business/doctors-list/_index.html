@@ -1,0 +1,11 @@
+	<div class="doctors-list @@if(context.class){@@class} swiper-container">
+		<ul class="doctors-list__list swiper-wrapper ">
+			@@for (let i = 0; i < items.length; i++) {
+			@@include("components/business/doctors-list/_item.html", {
+			name: "`+items[i].name+`",
+			description: "`+items[i].description+`",
+			src: "`+items[i].src+`",
+			})
+			}
+		</ul>
+	</div>

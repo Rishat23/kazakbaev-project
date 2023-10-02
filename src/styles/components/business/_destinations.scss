@@ -1,0 +1,54 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/helpers";
+@use "../../vars/colors";
+
+.destinations{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25em;
+
+	&__destination-wrapper{
+		width: calc(33% - 2.5em);
+		flex-grow: 1;
+		position: relative;
+
+		@include breakpoints.desktop_small{
+			width: calc(50% - .625em);
+			flex-grow: 0;
+		}
+
+		@include breakpoints.tablet_small {
+			width: 100%;
+
+		}
+	}
+
+	&__destination-item{
+		height: 100%;
+
+		background-color: colors.$light-blue200;
+		padding: 2.875em;
+		border-radius: .9375em;
+
+		color: colors.$blue200;
+		display: flex;
+		flex-direction: column;
+		gap: .8125em;
+
+		&_lazer::before{
+			content:url("@icons/lazer.svg");
+		}
+		&_diagnostics::before{
+			content:url("@icons/eye_white.svg");
+		}
+		&_surgery::before{
+			content:url("@icons/box_eye.svg");
+		}
+		&_optics::before{
+			content:url("@icons/eye+.svg");
+		}
+		&_pediatric-ophthalmology::before{
+			content:url("@icons/child.svg");
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@use "../../mixins/fontsStyles";
+@use "../../mixins/fontsFamilies";
+@use "../../mixins/breakpoints";
+@use "../../mixins/helpers";
+@use "../../vars/colors";
+
+
+
+.about-us{
+	background: url("@images/background-k-right.jpg") 0/cover no-repeat;
+
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		padding-top: 7.5em ;
+		padding-bottom: 7.5em ;
+
+		@include breakpoints.tablet{
+			flex-direction: column;
+			gap: 2.5em ;
+
+		}
+	}
+	&__wrapper-image{
+
+		width: 49%;
+		position: relative;
+		border-radius: 0.9375em;
+		background-color: colors.$blue100;
+
+
+		&::before{
+			content: "";
+			padding-top: 63%;
+			display: block;
+		}
+	}
+
+	&__image{
+
+		@include helpers.contain;
+		border-radius: .9375em;
+		@include breakpoints.min_tablet{
+			top: 1.5625em;
+			left: 1.5625em;
+		}
+	}
+
+	&__content{
+		display: flex;
+		flex-direction:column ;
+		gap:  1.5625em;
+		align-items: start;
+		width: 36%;
+		align-self: end;
+
+		@include breakpoints.tablet{
+			width: 50%;
+		}
+		@include breakpoints.mobile_middle{
+			width: 80%;
+			align-self: start;
+		}
+		@include breakpoints.mobile_small {
+			width: 100%;
+		}
+	}
+
+	&__small-title{
+		@include fontsStyles.TextMD;
+		color: colors.$blue100;
+	}
+
+	&__title{
+		@include fontsStyles.DisplayLG;
+		@include fontsFamilies.CommissionerMedium;
+		color: colors.$blue400;
+		@include breakpoints.desktop_base{
+			@include fontsStyles.DisplayMD;
+		}
+	}
+
+	&__text{
+		@include fontsStyles.TextMD;
+		color: colors.$gray900;
+	}
+
+}

@@ -1,0 +1,47 @@
+@use"../../mixins/breakpoints";
+@use"../../mixins/fontsFamilies";
+@use"../../vars/colors";
+
+
+.footer{
+	padding-top: 3.75em;
+	padding-bottom: 3.75em;
+	background: colors.$blue400;
+	color: colors.$white;
+
+
+	&__wrapper{
+		display: flex;
+		align-items: start;
+		gap: 5.625em;
+
+		@include breakpoints.tablet{
+			flex-direction: column;
+			gap: 3.125em;
+		}
+		@include breakpoints.mobile{
+			align-items: center;
+		}
+
+
+	}
+	&__logo{
+		flex-direction: column;
+		gap: 1em;
+		color: colors.$white;
+
+		@include breakpoints.tablet{
+			flex-direction: row;
+		}
+	}
+	&__shell{
+		display: flex;
+		flex-grow: 1;
+		gap: 5.625em;
+
+		@include breakpoints.desktop{
+			flex-direction: column;
+			gap: 2.21875em;
+		}
+	}
+}

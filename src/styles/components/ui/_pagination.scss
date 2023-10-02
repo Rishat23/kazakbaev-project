@@ -1,0 +1,20 @@
+@use "../../mixins/fontsStyles";
+@use "../../vars/colors";
+
+.pagination{
+	display: flex;
+	gap: .5625em;
+
+	&__item{
+		width: .6875em;
+		height:  .6875em;
+		border-radius: 50%;
+		background-color: colors.$light-blue100;
+		cursor: pointer;
+
+		&_active{
+			background-color: colors.$blue100;
+		}
+	}
+}
+

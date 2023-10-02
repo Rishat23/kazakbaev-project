@@ -1,0 +1,35 @@
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+
+.help-info{
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+
+	@include breakpoints.mobile{
+		flex-direction: column;
+		align-items: center;
+		gap: 3em;
+	}
+
+	&__chapter{
+		display: flex;
+		flex-direction: column;
+		gap: 1.5em;
+
+		@include breakpoints.mobile{
+			text-align: center;
+
+		}
+
+	}
+	&__nav-list{
+		display: flex;
+		flex-direction: column;
+		gap: .875em;
+	}
+
+	&__nav-item{
+		color: colors.$white;
+	}
+}

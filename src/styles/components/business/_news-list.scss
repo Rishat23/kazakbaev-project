@@ -1,0 +1,44 @@
+@use "../../vars/colors";
+
+.news-list{
+	&__list{
+		display: flex;
+		gap: 1.25em;
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+	}
+
+	&__image{
+		border-radius:.9375em .9375em 0 0;
+		margin-bottom: -6px;
+	}
+
+	&__title{
+		line-height: 1.13;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: space-between;
+		gap: 1.46em;
+
+		padding: 1.5625em;
+		border-radius: 0 0 .9375em .9375em;
+
+		background-color: colors.$light-blue200;
+		color:  colors.$blue200;
+
+		&:hover{
+			background: linear-gradient(270deg, #526CAB 9.69%, #819CDE 89.01%);
+			color: colors.$white;
+
+			overflow: initial;
+		}
+	}
+}

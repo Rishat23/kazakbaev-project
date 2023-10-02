@@ -1,0 +1,9 @@
+<ul class="destinations @@if(context.class){@@class}">
+	@@for (let i = 0; i < items.length; i++) {
+		@@include("components/business/destinations/_item.html", {
+			href: "`+items[i].href+`",
+			text: "`+items[i].text+`",
+			class: "`+items[i].class+`"
+		})
+	}
+</ul>

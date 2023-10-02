@@ -1,0 +1,90 @@
+@use"../../mixins/fontsStyles";
+@use"../../mixins/fontsFamilies";
+@use"../../mixins/breakpoints";
+@use"../../mixins/helpers";
+@use"../../vars/colors";
+
+.our-branches{
+	padding-bottom: 5.625em;
+	position: relative;
+
+
+	@include breakpoints.min_tablet{
+		padding-top: 5.625em;
+
+	}
+
+	@include breakpoints.tablet {
+		background: colors.$white;
+	}
+
+
+	&__map{
+
+		@include breakpoints.min_tablet{
+			@include helpers.contain;
+		}
+
+		@include breakpoints.tablet{
+			width: 100%;
+			&::before{
+				content: "" ;
+				display: block;
+				padding-top: calc(81% + 5.625em);
+
+			}
+
+		}
+	}
+
+	&__wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 36%;
+		background:white;
+		border-radius: .9375em;
+		gap: 1.5625em;
+		z-index: 10;
+		position: relative;
+		padding: 4.375em 3.9375em 5.625em;
+		@include breakpoints.desktop_base{
+			width: 50%;
+		}
+		@include breakpoints.tablet{
+			flex-direction: column;
+			width: 60%;
+		}
+		@include breakpoints.tablet_small{
+			width: 84%;
+		}
+		@include breakpoints.mobile{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__title{
+		@include fontsStyles.DisplayMD;
+		color: colors.$blue400;
+	}
+
+	&__list{
+		@include fontsFamilies.InterMedium;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25em;
+
+		color: colors.$blue200;
+	}
+
+	&__item{
+		@include fontsStyles.TextMD;
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+@@if (context.href) {
+    <a href="@@href" class="text-with-icon @@if (context.class) {@@class}">
+        @@if (context.text) {<span class="text-with-icon__text" >@@text</span>}
+    </a>
+}
+
+@@if (!context.href) {
+    <div class="text-with-icon @@if (context.class) {@@class}">
+        @@if (context.text) {<span class="text-with-icon__text">@@text</span>}
+    </div>
+}

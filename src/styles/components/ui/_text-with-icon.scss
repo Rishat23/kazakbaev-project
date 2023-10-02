@@ -1,0 +1,63 @@
+@use "../../mixins/fontsStyles";
+@use "../../vars/colors";
+
+.text-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.9375em;
+	color: colors.$blue400;
+
+	&__text {
+        @include fontsStyles.TextMD;
+    }
+
+    &.text-with-icon_location::before {
+        content: url("@icons/location.svg");
+
+    }
+
+	&.text-with-icon_phone::before {
+		content: url("@icons/phone.svg");
+	}
+
+	&.text-with-icon_location_inverse {
+		color: colors.$white;
+		&::before{
+			content: url("@icons/location-inverse.svg");
+		}
+	}
+
+	&.text-with-icon_phone_inverse {
+		color: colors.$white;
+		&::before{
+			content: url("@icons/phone-inverse.svg");
+		}
+	}
+
+    &.text-with-icon_phone_lighter{
+		color: colors.$white;
+		font-weight: 600;
+
+		&::before {
+            content: url("@icons/phone-lighter.svg");
+        }
+    }
+	&.text-with-icon_mail {
+		color: colors.$white;
+		font-weight: 600;
+
+		&::before {
+			content: url("@icons/mail-logo.svg");
+		}
+	}
+
+	&.text-with-icon_vk::before {
+			content: url("@icons/vk.svg");
+	}
+
+	&.text-with-icon_telegram::before {
+		content: url("@icons/telegram.svg");
+	}
+}
+
+

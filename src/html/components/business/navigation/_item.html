@@ -1,0 +1,19 @@
+@@if (context.href !== "undefined") {
+	<li><a class="navigation__item" href="@@href">@@text</a></li>
+}
+
+@@if (context.href === "undefined") {
+	<li class="navigation__nested-wrapper">
+		<button
+			class="navigation__item navigation__item_nested"
+			@@if (context.id !== "undefined") {id="@@id"}
+		>
+		  @@text
+		</button>
+		<ul class="navigation__nested-list">
+			<li><a class="navigation__nested-item" href="#">Мать Шлюха</a></li>
+			<li><a class="navigation__nested-item" href="#">Мать Шлюха</a></li>
+			<li><a class="navigation__nested-item" href="#">Мать Шлюха</a></li>
+		</ul>
+	</li>
+}

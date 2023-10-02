@@ -1,0 +1,19 @@
+<section class="our-doctors ">
+	<div class="our-doctors__wrapper container slider">
+		<h2 class="our-doctors__title">Наши врачи</h2>
+		<div class="our-doctors__slider">
+
+			@@include("components/ui/_slider-arrows.html", {class:"our-doctors__slider-arrows"})
+			@@include("components/ui/_link-button.html", {
+				class:"button_rounder button_outlined button_arrow-right-icon our-doctors__link",
+				href: "#",
+				text: "Все врачи",
+			})
+		</div>
+
+		@@include("components/business/doctors-list/_main.html",{
+			class:"our-doctors__doctors-list"
+		})
+
+	</div>
+</section>

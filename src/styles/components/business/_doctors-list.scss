@@ -1,0 +1,77 @@
+@use "../../mixins/fontsStyles";
+@use "../../mixins/fontsFamilies";
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+
+.doctors-list{
+	position: relative;
+	height: 31.5em;
+	width: 100%;
+
+
+	&__list {
+		display: flex;
+		gap: 1.25em;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		flex-shrink: 1;
+
+
+		&:hover .doctors-list__name{
+			overflow: initial;
+		}
+
+		&:hover .doctors-list__description{
+			transform: translateY(-100%) ;
+			z-index: 0;
+		}
+	}
+
+	&__image{
+		border-radius: .9375em .9375em 0 0;
+		margin-bottom: -5px;
+	}
+
+	&__name{
+		padding: 1.9375em 0;
+		background-color: white;
+		border-radius: 0 0 .9375em .9375em;
+
+		@include fontsStyles.TextMD;
+		@include fontsFamilies.InterMedium;
+		color: colors.$blue200;
+
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__description{
+
+		position: absolute;
+		width: 100%;
+		padding: 1.875em;
+		background: linear-gradient(270deg, #526CAB 9.69%, #819CDE 89.01%);
+		border-radius: .9375em .9375em 0 0;
+
+		@include fontsStyles.TextMD;
+		@include fontsFamilies.CommissionerMedium;
+
+		text-align: center;
+		color: colors.$white;
+		z-index: -1;
+		top: 1px;
+	}
+}
+
+
+
+

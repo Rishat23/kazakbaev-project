@@ -1,0 +1,39 @@
+@use"../../mixins/fontsStyles";
+@use"../../mixins/breakpoints";
+@use"../../vars/colors";
+
+.footer-phone{
+	display: flex;
+	background: linear-gradient(270deg, #526CAB 9.69%, #819CDE 89.01%);
+
+	&__wrapper{
+		display: flex;
+		padding-top: 1.75em;
+		padding-bottom: 1.75em;
+		gap: 1.25em;
+		justify-content: center;
+		align-items: center;
+
+		@include breakpoints.mobile_middle {
+			flex-direction: column;
+		}
+	}
+	&__text{
+		@include fontsStyles.DisplayXS;
+		color: colors.$white;
+
+		@include breakpoints.tablet_small{
+			@include fontsStyles.TextMD;
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+@use "../../mixins/fontsStyles";
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+
+
+.our-doctors{
+	overflow: hidden;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding-top: 7.5em;
+		padding-bottom: 7.5em;
+		gap: 1.875em;
+	}
+
+
+	&__title{
+		@include fontsStyles.DisplayLG;
+		color: colors.$blue400;
+	}
+
+	&__slider{
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	& &__link{
+		@include breakpoints.mobile{
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+

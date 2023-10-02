@@ -1,0 +1,11 @@
+.faq__container {
+	background: #151515;
+	.header_desktop {
+		position: unset;
+		left: unset;
+		transform: unset;
+		.link_black {
+			color: $white;
+		}
+	}
+}

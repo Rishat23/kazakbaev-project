@@ -1,0 +1,9 @@
+.about-page {
+	& > .main-screen {
+		@include tablet_small {
+			margin-top: 0;
+		}
+	}
+}
+
+

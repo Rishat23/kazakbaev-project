@@ -1,0 +1,57 @@
+@use "../../mixins/fontsStyles";
+@use "../../vars/colors";
+
+.button {
+    @include fontsStyles.TextMD;
+
+    padding: .875em 3.375em; 
+    color: colors.$white ;
+    background: linear-gradient(270deg, #526CAB 9.69%, #819CDE 89.01%);
+    text-decoration: none;
+    border-radius: .9375em;
+
+    &_rounder {
+        border-radius: 2.0625em;
+    }
+
+    &_outlined {
+        background: transparent ;
+        border: 1px solid colors.$blue100;
+        color: colors.$blue200;
+    
+    }
+
+    &_eye-icon {
+        display: flex;
+        align-items: center;
+        padding: .75em 1.25em;
+        gap: 1.0625em;
+
+        &::before {
+            content: url("@icons/open-eye.svg"); 
+            width: 1.625em;
+            height: 1.25em;
+        }
+    }
+
+    &_arrow-right-icon {
+        display: flex;
+        align-items: center;
+        gap: 1.1875em;
+
+        &::after {
+            content: "";
+            width: .625em;
+            height: .625em;
+            border-left: 3px solid colors.$blue100;
+            border-bottom: 3px solid colors.$blue100;
+            transform: rotate(225deg);
+        }
+        
+    }
+
+}
+
+
+
+

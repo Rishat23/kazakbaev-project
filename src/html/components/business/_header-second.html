@@ -1,0 +1,24 @@
+<header class="header-second">
+	<div class="header-second__wrapper container">
+		@@include("components/business/navigation/_main.html", {
+			class:"header-second__navigation"
+		})
+		@@include("components/ui/_text-with-icon.html", {
+			class:"text-with-icon_location_inverse header-second__location",
+			text:"<strong>Ваш город:</strong> Уфа, Достоевского, 49"
+		})
+		<div class="header-second__utils-wrapper">
+			@@include("components/ui/_link-button.html", {
+				class:"button_eye-icon header-second__eye-button",
+				href:"#",
+				text:"Версия для слабовидящих"
+			})
+			@@include("components/ui/_text-with-icon.html", {
+				class:"text-with-icon_phone_inverse header-second__phone",
+				href:"tel:8 (800) 551-12-58",
+				text:"8 (800) 551-12-58"
+			})
+			@@include("components/ui/burger/_burger.html")
+		</div>
+	</div>
+</header>

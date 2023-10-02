@@ -1,0 +1,56 @@
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+.burger{
+
+	&_active{
+		.burger__list{
+			transform: translateX(0);
+		}
+	}
+
+	&__list{
+		position: absolute;
+		width: 360px;
+		display: flex;
+		flex-direction: column;
+		z-index: 10;
+		border: 1px solid colors.$blue200;
+		right: 0;
+		top: 0;
+		transform: translateX(100%);
+
+	}
+
+	&__item{
+		display: block;
+		padding: 1.5em;
+		background: colors.$gray500;
+		color: colors.$blue200;
+		width: 100%;
+
+		li:not(:last-child) &{
+			border-bottom: 1px solid colors.$blue200;
+		}
+	}
+
+	&__button{
+		display: none;
+		background: transparent;
+		width: 2.875em;
+		height: 2.875em;
+		z-index: 20;
+		position: relative;
+
+		@include breakpoints.desktop_base{
+			display: block;
+		}
+
+		&::before{
+			content:url("@icons/burger.svg");
+			@include breakpoints.tablet_small{
+				content:url("@icons/burger-small.svg");
+			}
+		}
+	}
+
+}

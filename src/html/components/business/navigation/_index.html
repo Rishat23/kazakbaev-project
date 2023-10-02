@@ -1,0 +1,11 @@
+<nav class="navigation @@if(context.class){@@class}">
+	<ul class="navigation__list">
+		@@for (let i = 0; i < items.length; i++) {
+			@@include("components/business/navigation/_item.html", {
+				href: "`+items[i].href+`",
+				text: "`+items[i].text+`",
+				id: "`+items[i].id+`"
+			})
+		}
+	</ul>
+</nav>

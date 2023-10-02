@@ -1,0 +1,70 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/fontsStyles";
+@use "../../mixins/helpers";
+@use "../../vars/colors";
+
+
+.first-screen {
+	background: url("@images/first-screen-background.png") 0/cover no-repeat  ;
+	overflow: hidden;
+
+	&__wrapper{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 2.0625em;
+		width: 51%;
+		position: relative;
+		padding: 7.5em 0;
+		@include breakpoints.tablet_small{
+			align-items: center;
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+	&__title {
+		color: colors.$blue400;
+	}
+	&__text{
+		color: colors.$gray900;
+		width: 65%;
+		@include breakpoints.desktop_extra_small{
+			width: 100%;
+		}
+	}
+
+
+	&__img {
+		width: calc(100% + 40px);
+		transform: translate(-20px, 7.85em);
+		border-radius: 100% 100% 0 0;
+
+		@include breakpoints.min_tablet_small{
+			@include helpers.contain;
+			width: 120%;
+			transform: translateX(100%);
+			border-radius: 100%  0 0 100%;
+		}
+		@include breakpoints.min_desktop_base{
+			width: 110%;
+		}
+	}
+
+	&__slider-arrows{
+		position: absolute;
+		bottom: 7.5em;
+		right: -6.75em ;
+		transform: translate(100%,100%);
+		z-index: 1;
+
+		@include breakpoints.tablet_small{
+			left:50%;
+			align-self: start;
+			right: initial;
+			bottom: 2.5em;
+			transform: translateX(-50%);
+		}
+	}
+}
+

@@ -1,0 +1,55 @@
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+
+
+.header-second {
+	font-size: 1rem;
+	padding: 1.1875em 0;
+	background-color: colors.$blue200;
+	position: relative;
+
+	.header-second__location {
+		display: none;
+		@include breakpoints.desktop_base{
+			display: flex;
+		}
+		@include breakpoints.mobile_middle{
+			strong {
+				display: none;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__navigation.navigation{
+		@include breakpoints.desktop_base{
+			display: none;
+		}
+	}
+
+	&__utils-wrapper{
+		display: flex;
+		gap: 2.5em;
+
+		.header-second__eye-button{
+			@include breakpoints.tablet_small{
+				display: none;
+			}
+		}
+
+		.header-second__phone{
+			&, .text-with-icon__text{
+				display: none;
+			}
+			@include breakpoints.mobile_middle{
+				display: flex;
+			}
+		}
+	}
+
+}
+
+

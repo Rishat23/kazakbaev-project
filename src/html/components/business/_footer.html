@@ -1,0 +1,49 @@
+<footer class="footer">
+	<div class="footer__wrapper container">
+			@@include("components/ui/_logo.html", {class:"footer__logo"})
+		<div class="footer__shell">
+			<ul class="help-info">
+				<li class="help-info__chapter">
+					<h3 class="help-info__title"> О клинике</h3>
+					@@include("components/business/help-info/_about-clinic.html")
+				</li>
+				<li class="help-info__chapter">
+					<h3 class="help-info__title">Пациентам</h3>
+					@@include("components/business/help-info/_for-patients.html")
+				</li>
+				<li class="help-info__chapter">
+					<h3 class="help-info__title">Контакты</h3>
+					@@include("components/business/help-info/_contacts.html")
+				</li>
+			</ul>
+			<div class="contacts">
+				<div class="contacts__wrapper">
+					@@include("components/ui/_text-with-icon.html", {
+					class:"text-with-icon_phone_lighter",
+					href:"tel:+7 (347) 224-90-24",
+					text:"+7 (347) 224-90-24",
+					})
+					@@include("components/ui/_text-with-icon.html", {
+					class:"text-with-icon_mail",
+					href:"mailto:",
+					text:"Kazakbaev-ufa@mail.ru",
+					})
+				</div>
+				<ul class="contacts__social-webs">
+					<li>
+						@@include("components/ui/_text-with-icon.html", {
+						class:"text-with-icon_vk",
+						href:"#",
+						})
+					</li>
+					<li>
+						@@include("components/ui/_text-with-icon.html", {
+						class:"text-with-icon_telegram",
+						href:"#",
+						})
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

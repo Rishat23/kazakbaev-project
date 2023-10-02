@@ -1,0 +1,34 @@
+@use "../../mixins/breakpoints";
+
+.contacts{
+	display: flex;
+	flex-direction: column;
+	gap: 1.875em;
+
+	@include breakpoints.desktop{
+		flex-direction: row;
+	}
+	@include breakpoints.mobile{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__wrapper{
+		display: flex;
+		flex-direction: column;
+		gap: 1.1875em;
+
+		@include breakpoints.desktop{
+			flex-direction: row;
+		}
+		@include breakpoints.mobile{
+			flex-direction: column;
+		}
+	}
+
+
+	&__social-webs{
+		display: flex;
+		gap: .75em;
+	}
+}

@@ -1,0 +1,63 @@
+@use "../../mixins/breakpoints";
+@use "../../vars/colors";
+
+
+.header-first{
+    background-color: colors.$white;
+    font-size: 1rem;
+
+    &__wrapper {
+        display: flex;
+        gap: 4.28125em;
+        padding-top: .75em;
+        padding-bottom: .5em;
+
+		@include breakpoints.desktop_base{
+			justify-content: space-between;
+		}
+
+		@include breakpoints.mobile_middle{
+			gap: 0;
+		}
+
+    }
+
+    &__logo {
+        align-items: center;
+        gap: 1.625em;
+		color: colors.$gray900;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+
+		@include breakpoints.desktop_base{
+			flex-grow: 0;
+			gap: 2.0625em;
+			.header-first__location {
+				display: none;
+			}
+		}
+
+		.header-first__phone{
+			@include breakpoints.tablet{
+				.text-with-icon__text{
+					display: none;
+				}
+			}
+			@include breakpoints.mobile_middle{
+				display: none;
+			}
+		}
+
+		@include breakpoints.tablet_small{
+			.header-first__call-button{
+				display: none;
+			}
+		}
+    }
+}
+

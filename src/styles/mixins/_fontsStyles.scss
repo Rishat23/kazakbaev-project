@@ -1,0 +1,24 @@
+@mixin DisplayXL{
+    font-size: 3.4375em;
+    line-height: 1.35;
+}
+
+@mixin DisplayLG{
+    font-size: 2.8125em;
+    line-height: 1.35;
+}
+
+@mixin DisplayMD{
+    font-size: 2.1875em;
+    line-height: 1.15;
+}
+
+@mixin DisplayXS{
+    font-size: 1.375em;
+    line-height: 1.95;
+}
+
+@mixin TextMD{
+    font-size: .9375em;
+    line-height: 1.6;
+}
